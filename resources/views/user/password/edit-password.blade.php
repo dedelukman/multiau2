@@ -1,0 +1,41 @@
+@extends('user/user-master')
+
+@section('user')
+
+
+<div class="middle_content_wrapper">
+<div class="col-md-6">
+    <h4>Change Password</h4>
+<form method="post" action="{{route('password.update')}}" >
+@csrf
+<div class="form-group">
+    <label for="exampleInputEmail1">Current Password</label>
+    <input id="current_password" type="password" class="form-control" name="oldpassword" 
+   
+    >    
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">New Password</label>
+    <input id="password" type="password" class="form-control" name="password" 
+   
+    >    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Confirm Password</label>
+    <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" 
+    
+    >    
+  </div> 
+
+
+  
+  
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+</div>
+</div><!--/middle content wrapper-->
+
+
+
+@endsection
